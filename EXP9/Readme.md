@@ -1,31 +1,56 @@
-# Browser Artifacts Analysis
+# Vulnerability Scanning (Passive Mode)
 
 ## Aim
-To check browser data like cookies, history and storage to understand privacy risks.
+To scan a web application and identify common security issues using a safe and non-intrusive method (passive scanning).
+
+---
 
 ## Theory
-Browsers store data such as cookies, history and local storage. This data can show user activity and may create privacy risks if misused.
+Vulnerability scanning is the process of identifying security weaknesses in a system or web application. These weaknesses may include missing security headers, insecure cookies, or misconfigurations.
+
+Passive scanning is a safe approach where the tool analyzes the traffic between the browser and the web application without sending harmful or intrusive requests. It only observes and reports potential issues, making it suitable for learning and testing.
+
+OWASP ZAP is an open-source web application security scanner that helps in detecting such vulnerabilities.
+
+---
 
 ## Methodology
-1. Open browser (Chrome/Firefox)
-2. Press F12 to open Developer Tools
-3. Go to Application/Storage tab
-4. Check cookies and local storage
-5. Use Browser History View to see browsing data
+1. Install and open **OWASP ZAP**  
+2. Ensure the tool is running in **Passive Scan Mode**  
+3. Enter the target website URL (safe/test website)  
+4. Browse the website normally through ZAP or using its proxy  
+5. Let ZAP capture and analyze the traffic  
+6. Go to the **Alerts/Results** section  
+7. Observe the vulnerabilities detected and their risk levels  
+
+---
 
 ## Results
-- Found tracking cookies  
-- Some session data was stored  
-- Browsing history with timestamps was visible  
+- Missing security headers such as Content-Security-Policy and X-Frame-Options  
+- Cookies without proper security flags like HttpOnly or Secure  
+- Some server-related information was exposed in responses  
+
+---
 
 ## Discussion
-Browser data contains sensitive information. If accessed by unauthorized users, it can lead to privacy issues or misuse.
+The results show that even basic web applications can have security issues if not properly configured. Passive scanning is useful because it identifies problems without affecting the target system.
+
+These vulnerabilities, if not fixed, can be exploited by attackers to gain information or compromise user data.
+
+---
 
 ## Future Scope
-- Create tools to detect tracking  
-- Improve browser privacy  
-- Study forensic analysis  
+- Perform active scanning in a controlled lab environment  
+- Automate vulnerability scanning using scripts  
+- Learn and use advanced tools like Burp Suite  
+- Fix identified vulnerabilities and re-test  
+
+---
 
 ## Tools Used
-- Browser Developer Tools (Chrome/Firefox)
-- Browser History View (Nirsoft) – https://www.nirsoft.net/utils/browsing_history_view.html
+- OWASP ZAP – https://www.zaproxy.org/
+
+---
+
+## Output
+[View Results PDF](results/output.pdf)
