@@ -30,4 +30,4 @@ Even simple websites can have security issues. Passive scanning is useful becaus
 
 ## Tools Used
 - OWASP ZAP – https://www.zaproxy.org/
-- Browser History View (Nirsoft) – https://www.nirsoft.net/utils/browsing_history_view.html
+
