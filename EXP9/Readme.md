@@ -52,5 +52,4 @@ These vulnerabilities, if not fixed, can be exploited by attackers to gain infor
 
 ---
 
-## Output
-[View Results PDF](results/output.pdf)
+
